@@ -11,6 +11,10 @@ create table test_table
 	 )
 /
 
+/* Make sure the table has no partitions */
+SELECT COUNT(*) FROM DBA_TAB_PARTITIONS WHERE TABLE_NAME = 'TEST_TABLE' ;
+
+
 
 /* Insert some random data */
 declare
